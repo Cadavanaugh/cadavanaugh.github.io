@@ -1,0 +1,121 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  background-color: #303030;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainContent, .projectsContent {
+  width: 1200px;
+}
+
+.name-pic {
+  text-align: center;
+}
+
+.name-pic img {
+  width: 150px;
+  border-radius: 100px;
+  margin: 30px 0;
+}
+
+.techs {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: center;
+  padding: 0 2%;
+  margin-top: 50px;
+}
+
+.techs div {
+  width:25%;
+  padding: 0 15px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.techs div img {
+  width: 100px;
+  transition: transform 1s linear, filter .2s linear;
+}
+
+.techs div:nth-child(1) img:hover {
+  transform: rotateY(360deg);
+}
+
+.techs div:nth-child(2) img:hover {
+  transform: rotateX(360deg);
+}
+
+.techs div:nth-child(3) img:hover {
+  transform: rotateZ(360deg);
+}
+
+.techs div:nth-child(4) img:hover {
+  filter: grayscale(1);
+}
+
+.techs div h5 {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+
+.projectsContent h1 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.projectsGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projectsGrid a {
+  width: 30%;
+  text-align: center;
+  margin: 0 20px;
+  margin-bottom: 50px;
+  padding: 10px;
+  transition: background-color .3s;
+}
+
+.projectsGrid a:hover {
+  background-color: rgb(0, 110, 0);
+  cursor: pointer;
+}
+
+.projectsGrid a img {
+  width: 200px;
+  border-radius: 15px;
+}
+
+.projectsGrid h3 {
+  margin: 12px 0;
+}
+
+@media screen and (max-width:768px) {  
+  .techs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projectsGrid a {
+    width: auto;
+  }
+}
